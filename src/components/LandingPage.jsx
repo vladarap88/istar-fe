@@ -9,7 +9,7 @@ const LandingPage = () => {
     <div className="landing-page">
       <header>
         <div className="logo">
-          <img src="/src/assets/images/logo.jpeg" alt="iStar Logo" /> 
+          <img src="src/assets/images/logo.jpeg" alt="iStar Logo" /> 
         </div>
       </header>
 
