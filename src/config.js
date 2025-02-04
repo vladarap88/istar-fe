@@ -1,6 +1,5 @@
 const CONFIG = {
-  //BACKEND_URL: "https://istar-be.onrender.com",
-  BACKEND_URL: "http://127.0.0.1:8000",
+  BACKEND_URL: "https://istar-be.onrender.com",
 };
 
 export default CONFIG;
