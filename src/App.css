@@ -1,20 +1,20 @@
-/* App.css */
+
 .app-container {
   display: flex;
-  flex-direction: column; /* Stack header, main, footer vertically */
-  min-height: 100vh; /* Ensure full viewport height */
-  font-family: 'Comic Sans MS', sans-serif; /* Fun and playful font */
-  background-color: #f7f8f4; /* Soft off-white background */
-  margin: 0; /* Remove default margins */
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Comic Sans MS', sans-serif;
+  background-color: #f7f8f4;
+  margin: 0;
   color: #333;
 }
 
 .app-header {
-  background-color: #a8d5ba; /* Soft pastel green background */
+  background-color: #a8d5ba;
   padding: 20px;
   text-align: center;
-  border-bottom: 2px solid #b0e0a8; /* Light green border */
-  border-radius: 10px; /* Rounded corners */
+  border-bottom: 2px solid #b0e0a8;
+  border-radius: 10px;
 }
 
 .logo {
@@ -25,7 +25,7 @@
 }
 
 .header-description {
-  color: #fff; /* White text for better contrast */
+  color: #fff;
   font-size: 1.1em;
   margin-top: 10px;
 }
@@ -34,17 +34,16 @@
   flex: 1;
   padding: 20px;
   display: flex;
-  flex-direction: column; /* Ensure proper stacking */
-  justify-content: center; /* Center content */
-  align-items: center; /* Center horizontally */
-  min-height: calc(100vh - 100px); /* Adjust based on header size */
-  width: 100vw; /* Ensure full width */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+  width: 100vw;
 }
 
 .form-card {
-  width: 100%; /* Take full width */
-  max-width: 600px; /* Prevent it from being too wide */
-  height: auto; /* Allow it to expand */
+  width: 100%;
+  max-width: 600px;
 }
 
 .form-instructions {
@@ -58,40 +57,39 @@
 }
 
 .story-form label {
-  display: block; /* Place labels above inputs */
+  display: block;
   margin-bottom: 10px;
   font-size: 1.2em;
-  color: #2a5d50; /* Darker green for labels */
+  color: #2a5d50;
 }
 
 .story-form input,
 .story-form textarea {
   width: 100%;
   padding: 12px;
-  border: 2px solid #b0e0a8; /* Soft green border */
-  border-radius: 12px; /* Round input and textarea borders */
-  box-sizing: border-box; /* Include padding in width calculation */
+  border: 2px solid #b0e0a8;
+  border-radius: 12px;
   font-size: 1em;
 }
 
 .story-form textarea {
-  height: 120px; /* Set a reasonable height for the textarea */
-  resize: vertical; /* Allow vertical resizing */
+  height: 120px;
+  resize: vertical;
 }
 
 .submit-button {
-  background-color: #b0e0a8; /* Soft green button */
+  background-color: #b0e0a8;
   color: #fff;
   padding: 15px 20px;
   border: none;
-  border-radius: 50px; /* Round button */
+  border-radius: 50px;
   cursor: pointer;
   font-size: 1.2em;
-  transition: background-color 0.3s; /* Subtle hover transition */
+  transition: background-color 0.3s;
 }
 
 .submit-button:hover {
-  background-color: #98d8b3; /* Slightly darker green on hover */
+  background-color: #98d8b3;
 }
 
 .pdf-container {
@@ -100,13 +98,13 @@
 
 h2 {
   font-size: 1.5em;
-  color: #2a5d50; /* Dark green for the header */
+  color: #2a5d50;
 }
 
 object {
   border: none;
   width: 100%;
-  height: 600px; /* Set fixed height for PDF */
+  height: 600px;
 }
 
 html, body {

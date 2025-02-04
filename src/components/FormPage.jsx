@@ -20,10 +20,10 @@ const FormPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.get(CONFIG.BACKEND_URL, {
-        params: formData,
-        responseType: 'blob',
-      });
+      const res = await axios.post(CONFIG.BACKEND_URL,
+        formData,
+        { responseType: 'blob' },
+      );
 
       if (res.headers['content-type'] !== 'application/pdf') {
         throw new Error('The response is not a PDF file');
@@ -40,14 +40,25 @@ const FormPage = () => {
 
   return (
     <div className="form-container">
-      <h1>Create Your Book</h1>
+      <div className="header">
+       <span className="title">WHO IS THE STORY BOOK HERO?</span>
+     </div>
+
+
+     <p className="description">
+       [TBD: add a paragraph that describes the details needed in the form
+       what you must complete and what is optional]
+     </p>
+     <p className="instructions">
+       After completing the details you will get your personal book
+     </p>
       <form onSubmit={handleSubmit}>
         <input type="text" name="first_name" placeholder="First Name" value={formData.first_name} onChange={handleChange} required />
         <input type="text" name="last_name" placeholder="Last Name" value={formData.last_name} onChange={handleChange} required />
         <input type="date" name="birth_date" value={formData.birth_date} onChange={handleChange} required />
         <input type="email" name="email" placeholder="Email (optional)" value={formData.email} onChange={handleChange} />
-        <textarea name="personal_note" placeholder="Personal Note (optional)" value={formData.personal_note} onChange={handleChange} />
-        <button type="submit">Generate PDF</button>
+        <textarea name="personal_note" placeholder="Personal Note (optional, max 200 characters)" value={formData.personal_note} onChange={handleChange} maxLength={200}/>
+        <button type="submit" className="submit-button">Make Your Personal Book</button>
       </form>
 
       {pdfFile && (

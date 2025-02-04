@@ -1,40 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
 .landing-page {
     text-align: center;
     background-color: #b0b7d0;
     height: 100vh;
-    width: 100vw; /* Ensure full width */
+    width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Spread content evenly */
+    justify-content: space-between;
     align-items: center;
-    padding: 20px; /* Add some spacing */
-    box-sizing: border-box; /* Ensure padding doesn't affect the width */
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Itim', cursive;
 }
-
+  
 header {
     width: 100%;
     padding: 20px 0;
 }
-
+  
 .logo img {
-    width: 400px; /* Make the logo smaller */
+    width: 400px;
     height: auto;
 }
-
+  
 main {
-    flex: 1; /* Allow main content to expand */
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center the content */
+    justify-content: center;
     align-items: center;
     width: 100%;
 }
-
+  
 .hero {
-    max-width: 600px; /* Prevent content from stretching too wide */
+    max-width: 600px;
     padding: 20px;
 }
-
+  
 .create-book-button {
     background-color: #3b2a6a;
     color: white;
@@ -44,8 +47,10 @@ main {
     border-radius: 25px;
     cursor: pointer;
     margin-top: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
-
+  
 .create-book-button:hover {
     background-color: #2a1d4f;
 }

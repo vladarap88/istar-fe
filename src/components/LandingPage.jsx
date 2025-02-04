@@ -19,7 +19,7 @@ const LandingPage = () => {
           <p>Turn your child into the hero of their own story!</p>
           <button 
             className="create-book-button"
-            onClick={() => navigate('/form')}  // Navigate to FormPage
+            onClick={() => navigate('/form')} 
           >
             Create Your Book
           </button>
