@@ -39,36 +39,50 @@ const FormPage = () => {
   };
 
   return (
-    <div className="form-container">
-      <div className="header">
-       <span className="title">WHO IS THE STORY BOOK HERO?</span>
-     </div>
-
-
-     <p className="description">
-       [TBD: add a paragraph that describes the details needed in the form
-       what you must complete and what is optional]
-     </p>
-     <p className="instructions">
-       After completing the details you will get your personal book
-     </p>
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="first_name" placeholder="First Name" value={formData.first_name} onChange={handleChange} required />
-        <input type="text" name="last_name" placeholder="Last Name" value={formData.last_name} onChange={handleChange} required />
-        <input type="date" name="birth_date" value={formData.birth_date} onChange={handleChange} required />
-        <input type="email" name="email" placeholder="Email (optional)" value={formData.email} onChange={handleChange} />
-        <textarea name="personal_note" placeholder="Personal Note (optional, max 200 characters)" value={formData.personal_note} onChange={handleChange} maxLength={200}/>
-        <button type="submit" className="submit-button">Make Your Personal Book</button>
-      </form>
-
-      {pdfFile && (
-        <div className="pdf-preview">
-          <h2>Preview</h2>
-          <object data={pdfFile} type="application/pdf" width="100%" height="600px">
-            <p>Your browser does not support PDFs. <a href={pdfFile}>Download it here</a>.</p>
-          </object>
+    <div className="form-page-container">
+      <div className="intro">
+        <div className="logo">
+          <img src="/images/logo.jpeg" alt="iStar Logo" />
         </div>
-      )}
+        <div className="header">
+          <h1>Create Your Personalized Book!</h1>
+          <p>Who is the story book hero?</p>
+        </div>
+      </div>
+
+      <div className="form-container">
+        <div className="form-description">
+          <p>Enter your details below to bring your unique book to life.</p>
+          <div className="instructions">
+            <p>✨ <strong>What you need to do:</strong></p>
+            <ul>
+              <li><strong>First Name & Last Name:</strong> Only letters, max 20 characters</li>
+              <li><strong>Date of Birth:</strong> Follow the format</li>
+              <li><strong>Email (Optional):</strong> Get your book sent straight to your inbox!</li>
+              <li><strong>Personal Note (Optional):</strong> Add a special touch (max 200 characters)</li>
+            </ul>
+            <p>📖 Once you submit, you'll receive a beautifully crafted book made just for you!</p>
+          </div>
+        </div>
+
+        <form onSubmit={handleSubmit}>
+          <input type="text" name="first_name" placeholder="First Name" value={formData.first_name} onChange={handleChange} required />
+          <input type="text" name="last_name" placeholder="Last Name" value={formData.last_name} onChange={handleChange} required />
+          <input type="date" name="birth_date" value={formData.birth_date} onChange={handleChange} required />
+          <input type="email" name="email" placeholder="Email (optional)" value={formData.email} onChange={handleChange} />
+          <textarea name="personal_note" placeholder="Personal Note (optional, max 200 characters)" value={formData.personal_note} onChange={handleChange} maxLength={200} />
+          <button type="submit" className="submit-button">Make Your Personal Book</button>
+        </form>
+
+        {pdfFile && (
+          <div className="pdf-preview">
+            <h2>Preview</h2>
+            <object data={pdfFile} type="application/pdf" width="100%" height="600px">
+              <p>Your browser does not support PDFs. <a href={pdfFile}>Download it here</a>.</p>
+            </object>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

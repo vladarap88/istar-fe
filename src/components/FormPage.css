@@ -1,80 +1,168 @@
-.form-container {
-  background-color: #f0f0f0;
-  border-radius: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+/* General Styles */
+body {
+  background: linear-gradient(to bottom, #e0c3fc, #8ec5fc); /* Lavender to sky blue */
+  color: #4a148c;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: flex-start; /* Align to the top of the screen */
+  min-height: 100vh;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  height: 100%;
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+/* Allow content to scroll vertically */
+html {
+  height: 100%;
+  overflow-y: auto; /* Allow vertical scrolling */
+}
+
+/* Styling for the logo */
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.logo img {
+  width: 140px;
+  height: auto;
+  border-radius: 50%; /* Fully rounded */
+  box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.4); /* Dreamy glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  color: #6a1b9a;
+  text-shadow: 3px 3px 10px rgba(106, 27, 154, 0.3);
+}
+
+.header p {
+  font-size: 1.8rem;
+  color: #4a148c;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* Form Container */
+.form-page-container .form-container {
+  font-family: 'Itim', cursive;
+  background: linear-gradient(to bottom, #e0c3fc, #8ec5fc);
+  border-radius: 0;
   padding: 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  max-width: 600px; 
-  margin: 30px auto;
+  max-width: 600px;
+  width: 100%;
+  margin: 30px;
   text-align: center;
-  font-family: sans-serif;
-
-.header { 
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  margin-bottom: 20px;
+  overflow-y: auto;
+  height: 80vh;
 }
 
-.title {
-  font-size: 1.8em; 
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 10px;
+/* Form Description */
+.form-description {
+  color: #555;
+  margin-bottom: 15px;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 1.5;
 }
 
-.description, 
+/* Instructions */
 .instructions {
-  color: #555; 
-  margin-bottom: 15px; 
-  text-align: left; 
-  padding-left: 20px; 
-  padding-right: 20px; 
+  color: #555;
+  margin-bottom: 15px;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 1.5;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  align-items: stretch; 
+  align-items: stretch;
   padding-left: 20px;
-  padding-right: 20px; 
+  padding-right: 20px;
 }
 
 input, 
 textarea {
   width: 100%;
   padding: 12px;
-  margin: 10px 0; 
-  border: 1px solid #ccc; 
+  margin: 10px 0;
+  border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1em;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 input:focus, 
 textarea:focus {
-  border-color: #007bff; 
+  border-color: #007bff;
   outline: none;
 }
 
 textarea {
   resize: vertical;
-  height: 100px; 
+  height: 100px;
 }
 
+/* Submit Button */
 .submit-button {
-  background-color: #007bff; 
-  color: #fff;
-  padding: 12px 20px;
-  font-size: 1em;
+  background: linear-gradient(135deg, #ffcc33, #ff9900);
+  color: white;
+  padding: 14px 30px;
+  font-size: 1.3rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0px 5px 12px rgba(255, 165, 0, 0.5);
   width: 100%;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 .submit-button:hover {
-  background-color: #0056b3;
+  background: linear-gradient(135deg, #ffb300, #ff6f00);
+  box-shadow: 0px 8px 18px rgba(255, 140, 0, 0.7);
+  transform: scale(1.07);
 }
+
+/* PDF Preview */
+.pdf-preview {
+  margin-top: 20px;
+  background: #f0f0f0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-preview h2 {
+  font-size: 1.5em;
+  color: #6a1b9a;
+}
+
+.pdf-preview object {
+  width: 100%;
+  height: 500px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  margin-top: 20px;
 }
