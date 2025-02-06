@@ -24,11 +24,9 @@ const LandingPage = () => {
             Create Your Book
           </button>
         </div>
-        
-        {/* Added description */}
         <section className="story-description">
           <p>
-            Dean and Adam, two adventurous brothers, embark on a magical journey to find the perfect name for a baby born in their village. Along the way, they meet wonderful animals, each contributing a letter to create the perfect name. Join them on this unforgettable adventure to find a name that matches the baby's heart and dreams!
+             Dean and Adam, two adventurous brothers, embark on a magical journey to find the perfect name for every child born in their worldwide village. Along the way, they meet wonderful animals, each contributing the first letter from their name to create the perfect name. Join them on this unforgettable adventure to find a name that matches the child's heart and dreams!
           </p>
         </section>
       </main>

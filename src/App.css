@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-/* General Styles */
 body {
   margin: 0;
   padding: 0;
@@ -12,18 +11,15 @@ body {
   background-color: #f8f8f8;
 }
 
-/* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Links */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Button Styles */
 button {
   cursor: pointer;
 }
@@ -32,7 +28,6 @@ button:focus {
   outline: none;
 }
 
-/* Hero Section Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
