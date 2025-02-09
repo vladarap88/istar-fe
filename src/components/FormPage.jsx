@@ -66,8 +66,8 @@ const FormPage = () => {
         </div>
 
         <form onSubmit={handleSubmit}>
-          <input type="text" name="first_name" placeholder="First Name" value={formData.first_name} onChange={handleChange} required />
-          <input type="text" name="last_name" placeholder="Last Name" value={formData.last_name} onChange={handleChange} required />
+          <input type="text" pattern="[A-Za-z]+" name="first_name" placeholder="First Name" value={formData.first_name} onChange={handleChange} required maxLength={20} />
+          <input type="text" pattern="[A-Za-z]+" name="last_name" placeholder="Last Name" value={formData.last_name} onChange={handleChange} required maxLength={20} />
           <input type="date" name="birth_date" value={formData.birth_date} onChange={handleChange} required />
           <input type="email" name="email" placeholder="Email (optional)" value={formData.email} onChange={handleChange} />
           <textarea name="personal_note" placeholder="Personal Note (optional, max 200 characters)" value={formData.personal_note} onChange={handleChange} maxLength={200} />

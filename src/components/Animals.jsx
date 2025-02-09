@@ -1,36 +1,40 @@
-// import React, { useEffect, useState } from 'react';
-// import './AnimalList.css';
+import React from "react";
+import "./Animals.css";
 
-// const AnimalList = () => {
-//   const [animals, setAnimals] = useState([]);
+const animalNames = [
+  "Alligator", "Bear", "Cat", "Dolphin", "Elephant", "Frog", "Giraffe",
+  "Horse", "Iguana", "Jaguar", "Kangaroo", "Lion", "Monkey", "Nutcracker bird",
+  "Octopus", "Penguin", "Quoll", "Rabbit", "Snake", "Tiger", "Unan",
+  "Vulture bird", "Wombat", "Xenops bird", "Yak", "Zebra"
+];
 
-//   useEffect(() => {
-//     // Fetch the animal data from the Django backend
-//     fetch('http://localhost:8000/api/animals') // Change URL as needed
-//       .then(response => response.json())
-//       .then(data => {
-//         setAnimals(data.animals);
-//       })
-//       .catch(error => console.error('Error fetching data:', error));
-//   }, []);
+// Sort alphabetically
+const sortedAnimalNames = animalNames.sort();
 
-//   // Sort animals alphabetically by name
-//   const sortedAnimals = animals.sort((a, b) => a.name.localeCompare(b.name));
+const Animals = () => {
+  return (
+    <div className="animals-page">
+      {/* iStar logo at the top */}
+      <header>
+        <div className="logo">
+          <img src="/images/logo.jpeg" alt="iStar Logo" />
+        </div>
+      </header>
 
-//   return (
-//     <div className="animal-list-container">
-//       <h1>Animal List</h1>
-//       <div className="animal-list">
-//         {sortedAnimals.map((animal) => (
-//           <div className="animal-card" key={animal.name}>
-//             <img src={animal.image_url} alt={animal.name} className="animal-image" />
-//             <h2 className="animal-name">{animal.name}</h2>
-//             <p className="animal-description">{animal.description}</p>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
+      <h1 className="animals-title">Meet the Animals</h1>
+      <div className="animals-grid">
+        {sortedAnimalNames.map((name, index) => {
+          const formattedName = name.replace(/\s+/g, "%20"); // Format filename for URL
+          return (
+            <div className="animal-card" key={index}>
+              <img src={`/images/animals/${formattedName}.jpeg`} alt={name} />
+              <p className="animal-name">{name}</p>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
 
-// export default AnimalList;
+export default Animals;
