@@ -4,7 +4,7 @@ import "./Animals.css";
 const animalNames = [
   "Alligator", "Bear", "Cat", "Dolphin", "Elephant", "Frog", "Giraffe",
   "Horse", "Iguana", "Jaguar", "Kangaroo", "Lion", "Monkey", "Nutcracker bird",
-  "Octopus", "Penguin", "Quoll", "Rabbit", "Snake", "Tiger", "Unan",
+  "Octopus", "Penguin", "Quoll", "Rabbit", "Snake", "Tiger", "Unau",
   "Vulture bird", "Wombat", "Xenops bird", "Yak", "Zebra"
 ];
 
