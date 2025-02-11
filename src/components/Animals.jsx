@@ -24,7 +24,7 @@ const Animals = () => {
       <h1 className="animals-title">Meet the Animals</h1>
       <div className="animals-grid">
         {sortedAnimalNames.map((name, index) => {
-          const formattedName = name.replace(/\s+/g, "%20"); // Format filename for URL
+          const formattedName = name.replace(/\s+/g, "%20"); 
           return (
             <div className="animal-card" key={index}>
               <img src={`/images/animals/${formattedName}.jpeg`} alt={name} />
